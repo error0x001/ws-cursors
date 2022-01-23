@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  cursor:
+    build: .
+    ports:
+      - "4567:4567"
+    environment:
+      - ADDRESS=0.0.0.0
+      - PORT=4567
+      - TEMPLATE_PATH=/go/bin/templates/index.html
+      - SHUTDOWN_TIME=5
+      - IS_SSL_USING=0
